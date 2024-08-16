@@ -1,0 +1,6 @@
+.container {
+  max-width: 100%;
+  background: rgb(237, 237, 237);
+  position: relative;
+  /* padding: 0 8.33vw; */
+}

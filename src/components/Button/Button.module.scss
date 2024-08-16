@@ -1,0 +1,15 @@
+.btn {
+    box-sizing: border-box;
+    border: 1px solid rgb(60, 66, 66);
+    border-radius: 8px;
+    color: rgb(138, 51, 253);
+    padding: 16px 20px 16px 20px;
+    background-color: transparent;
+    width: 70%;
+    
+    &:hover {
+        border-radius: 8px;
+        background: rgb(138, 51, 253);
+        color: rgb(255, 255, 255);
+    }
+}

@@ -1,0 +1,15 @@
+.close {
+    display: block;
+    width: 1.16vw;
+    height: 2.24vh;
+    cursor: pointer;
+    background-image: url("./close.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 3%;
+    left: 94%;
+}

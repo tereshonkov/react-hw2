@@ -1,0 +1,16 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: content-box;
+    margin-bottom: 8.21vh;
+}
+.body__header {
+    color: rgb(25, 25, 25);
+    font-size: 32px;
+    font-weight: 400;
+}
+.body__text {
+    color: rgb(127, 127, 127);
+    font-weight: 500;
+}

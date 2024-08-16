@@ -1,0 +1,35 @@
+.wrapper {
+    padding: 4.63vh 8.33vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.favor {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgb(246, 246, 246);
+    background-image: url("/favor.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+}
+.cart {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgb(246, 246, 246);
+    background-image: url("/cart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    cursor: pointer;
+}

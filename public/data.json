@@ -1,0 +1,14 @@
+[
+  { "name": "Shirts", "price": 10.99, "isFavorite": false, "img": "/Rectangle9.jpeg", "id": 1, "quantity": 0, "sku": "SKU001", "sex": "male", "description": "Classic shirts made from soft cotton, perfect for everyday wear." },
+  { "name": "Printed T-Shirts", "price": 23.50, "isFavorite": false, "img": "/Rectangle10.jpeg", "id": 2, "quantity": 0, "sku": "SKU002", "sex": "male", "description": "Trendy printed t-shirts with unique designs and vibrant colors." },
+  { "name": "Plain T-Shirt", "price": 7.99, "isFavorite": false, "img": "/Rectangle11.jpeg", "id": 3, "quantity": 0, "sku": "SKU003", "sex": "male", "description": "Simple and versatile plain t-shirt available in various colors." },
+  { "name": "Polo T-Shirt", "price": 15.00, "isFavorite": false, "img": "/Rectangle12.jpeg", "id": 4, "quantity": 0, "sku": "SKU004", "sex": "male", "description": "Stylish polo t-shirt with a classic collar, suitable for both casual and semi-formal occasions." },
+  { "name": "Hoodies & Sweatshirts", "price": 40.00, "isFavorite": false, "img": "/Rectangle5.jpeg", "id": 5, "quantity": 0, "sku": "SKU005", "sex": "male", "description": "Cozy hoodies and sweatshirts designed to keep you warm and comfortable." },
+  { "name": "Jeans", "price": 9.99, "isFavorite": false, "img": "/Rectangle6.jpeg", "id": 6, "quantity": 0, "sku": "SKU006", "sex": "male", "description": "Durable and stylish jeans perfect for everyday use." },
+  { "name": "Activewear", "price": 5.50, "isFavorite": false, "img": "/Rectangle7.jpeg", "id": 7, "quantity": 0, "sku": "SKU007", "sex": "male", "description": "Comfortable activewear designed for exercise and outdoor activities." },
+  { "name": "Boxers", "price": 12.75, "isFavorite": false, "img": "/Rectangle8.jpeg", "id": 8, "quantity": 0, "sku": "SKU008", "sex": "male", "description": "Soft and breathable boxers for all-day comfort." },
+  { "name": "Hoodies & Sweatshirts", "price": 22.20, "isFavorite": false, "img": "/Rectangle1.jpeg", "id": 9, "quantity": 0, "sku": "SKU009", "sex": "female", "description": "Trendy hoodies and sweatshirts designed to keep you cozy and stylish." },
+  { "name": "Coats & Parkas", "price": 30.00, "isFavorite": false, "img": "/Rectangle2.jpeg", "id": 10, "quantity": 0, "sku": "SKU010", "sex": "female", "description": "Warm and fashionable coats and parkas for chilly weather." },
+  { "name": "Tees & T-Shirts", "price": 18.00, "isFavorite": false, "img": "/Rectangle3.jpeg", "id": 11, "quantity": 0, "sku": "SKU011", "sex": "female", "description": "Stylish tees and t-shirts with modern cuts and designs." },
+  { "name": "Boxers", "price": 25.00, "isFavorite": false, "img": "/Rectangle4.jpeg", "id": 12, "quantity": 0, "sku": "SKU012", "sex": "female", "description": "Comfortable boxers made from high-quality materials." }
+]
