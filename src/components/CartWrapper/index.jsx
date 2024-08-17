@@ -35,7 +35,7 @@ index.propTypes = {
   array: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
-      sex: PropTypes.oneOf(['male', 'female']).isRequired,
+      sex: PropTypes.oneOf(['male', 'female']),
       img: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
