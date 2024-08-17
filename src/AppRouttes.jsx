@@ -5,9 +5,9 @@ import Favorite from './pages/Favorite'
 import Home from './pages/Home'
 import Card from './components/Card'
 
-export default function AppRouttes({addToCart, toogleIsFavorite, array = [], isShowSecond, selectedProductId, setIsShowSecond, setSelectedProductId}) {
+export default function AppRouttes({deleteCart, addToCart, toogleIsFavorite, array = [], isShowSecond, selectedProductId, setIsShowSecond, setSelectedProductId}) {
 
-    const renderCards = (filterCondition) => {
+    const renderCards = (filterCondition, nameBtn) => {
         return array
           .filter(filterCondition)
           .map(el => (
@@ -21,6 +21,7 @@ export default function AppRouttes({addToCart, toogleIsFavorite, array = [], isS
               img={el.img}
               name={el.name}
               price={el.price}
+              children={nameBtn}
             />
           ));
       };
@@ -28,7 +29,7 @@ export default function AppRouttes({addToCart, toogleIsFavorite, array = [], isS
   return (
     <Routes>
         <Route path='/' element={<Home renderCards={renderCards} addToCart={addToCart} toogleIsFavorite={toogleIsFavorite} array={array} isShowSecond={isShowSecond} selectedProductId={selectedProductId} setIsShowSecond={setIsShowSecond} setSelectedProductId={setSelectedProductId}/>} />
-        <Route path='/cart' element={<CartPages renderCards={renderCards} addToCart={addToCart} toogleIsFavorite={toogleIsFavorite} array={array} isShowSecond={isShowSecond} selectedProductId={selectedProductId} setIsShowSecond={setIsShowSecond} setSelectedProductId={setSelectedProductId}/>} />
+        <Route path='/cart' element={<CartPages deleteCart={deleteCart} renderCards={renderCards} addToCart={addToCart} toogleIsFavorite={toogleIsFavorite} array={array} isShowSecond={isShowSecond} selectedProductId={selectedProductId} setIsShowSecond={setIsShowSecond} setSelectedProductId={setSelectedProductId}/>} />
         <Route path='/favorite' element={<Favorite renderCards={renderCards} addToCart={addToCart} toogleIsFavorite={toogleIsFavorite} array={array} isShowSecond={isShowSecond} selectedProductId={selectedProductId} setIsShowSecond={setIsShowSecond} setSelectedProductId={setSelectedProductId}/>} />
     </Routes>
   )

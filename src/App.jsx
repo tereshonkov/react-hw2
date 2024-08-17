@@ -45,16 +45,29 @@ function App() {
       const elemCart = carts.find(el => el.id === id);
       elemCart.quantity += 1;
       localStorage.setItem(`products`, JSON.stringify(carts));
+      setIsShowSecond(false);
 
       return carts;
     })
+  }
+
+    const deleteCart = (id) => {
+      setArray(prev => {
+        const carts = structuredClone(prev);
+        const elemCart = carts.find(el => el.id === id);
+        elemCart.quantity = 0;
+        localStorage.setItem(`products`, JSON.stringify(carts));
+        setIsShowSecond(false);
+  
+        return carts;
+      })
   }
   
   return (
   <div className="container">
     <Headers array={array}></Headers>
     <HeadersLogo></HeadersLogo>
-    <AppRouttes addToCart={addToCart} toogleIsFavorite={toogleIsFavorite} array={array} isShowSecond={isShowSecond} selectedProductId={selectedProductId} setIsShowSecond={setIsShowSecond} setSelectedProductId={setSelectedProductId} />
+    <AppRouttes deleteCart={deleteCart} addToCart={addToCart} toogleIsFavorite={toogleIsFavorite} array={array} isShowSecond={isShowSecond} selectedProductId={selectedProductId} setIsShowSecond={setIsShowSecond} setSelectedProductId={setSelectedProductId} />
     <Footer></Footer>
   </div>
   )

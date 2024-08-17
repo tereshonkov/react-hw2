@@ -4,7 +4,7 @@ import Card from '../Card'
 import ModalText from '../../components/ModalText/ModalText';
 import PropTypes from 'prop-types';
 
-export default function index({setIsShowSecond, array, setSelectedProductId, selectedProductId, isShowSecond, toogleIsFavorite, addToCart, renderMale, renderFemale}) {
+export default function index({firstClick, firstText, setIsShowSecond, array, setSelectedProductId, selectedProductId, isShowSecond, toogleIsFavorite, addToCart, renderMale, renderFemale}) {
   return (
     <div className={styles.wrapper}>
     <div>
@@ -25,7 +25,7 @@ export default function index({setIsShowSecond, array, setSelectedProductId, sel
             {renderFemale}
     </div>
     </div>
-    <ModalText addToCart={addToCart} array={array} isShowSecond={isShowSecond} setIsShowSecond={setIsShowSecond} selectedProductId={selectedProductId}></ModalText>
+    <ModalText firstClick={firstClick} firstText={firstText} addToCart={addToCart} array={array} isShowSecond={isShowSecond} setIsShowSecond={setIsShowSecond} selectedProductId={selectedProductId}></ModalText>
     </div>
   )
 }

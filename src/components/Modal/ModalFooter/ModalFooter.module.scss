@@ -1,4 +1,7 @@
 .footer__btn {
+    width: 100%;
     display: flex;
-    gap: 6.44vw;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
 }

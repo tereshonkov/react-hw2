@@ -4,7 +4,7 @@ import StarIcon from '../../svg/StarIcon'
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 
-export default function index({img,name, price, setIsShowSecond, setSelectedProduct, id, toogleIsFavorite = () => {}, array = [],}) {
+export default function index({children, img,name, price, setIsShowSecond, setSelectedProduct, id, toogleIsFavorite = () => {}, array = [],}) {
 
   const clickFunc = () => {
     setIsShowSecond(true);
@@ -23,7 +23,7 @@ export default function index({img,name, price, setIsShowSecond, setSelectedProd
             <p className={styles.priceText}>{price}</p>
         </div>
         </div>
-        <Button type="button" onClick={() => {clickFunc()}}>Add Card</Button>
+        <Button type="button" onClick={() => {clickFunc()}}>{children}</Button>
     </div>
   )
 }

@@ -8,7 +8,7 @@ import ModalClose from '../Modal/ModalClose/ModalClose';
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 
-export default function ModalText({isShowSecond, setIsShowSecond, array = [], selectedProductId, addToCart, id}) {
+export default function ModalText({firstClick, isShowSecond, setIsShowSecond, array = [], selectedProductId, addToCart, id, firstText}) {
     if(!isShowSecond) {
         return null;
     }
@@ -27,8 +27,8 @@ export default function ModalText({isShowSecond, setIsShowSecond, array = [], se
         {/* </p> */}
             </ModalBody>
             <ModalFooter
-                                firstText="ADD TO CART" 
-                                firstClick={() => {addToCart(selectedProductId)}} 
+                                firstText={firstText} 
+                                firstClick={firstClick}
                                 componentName="ModalText"
             ></ModalFooter>
                 <ModalClose setIsShowSecond={setIsShowSecond} componentName="ModalText"></ModalClose>
