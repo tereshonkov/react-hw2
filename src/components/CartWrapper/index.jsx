@@ -31,20 +31,20 @@ export default function index({firstClick, firstText, setIsShowSecond, array, se
 }
 
 index.propTypes = {
-  setIsShowSecond: PropTypes.func.isRequired,
+  setIsShowSecond: PropTypes.func,
   array: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
       sex: PropTypes.oneOf(['male', 'female']),
-      img: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-      sku: PropTypes.string.isRequired
+      img: PropTypes.string,
+      name: PropTypes.string,
+      price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      sku: PropTypes.string,
     })
-  ).isRequired,
-  setSelectedProductId: PropTypes.func.isRequired,
+  ),
+  setSelectedProductId: PropTypes.func,
   selectedProductId: PropTypes.string,
-  isShowSecond: PropTypes.bool.isRequired,
-  toogleIsFavorite: PropTypes.func.isRequired,
-  addToCart: PropTypes.func.isRequired
+  isShowSecond: PropTypes.bool,
+  toogleIsFavorite: PropTypes.func,
+  addToCart: PropTypes.func,
 };

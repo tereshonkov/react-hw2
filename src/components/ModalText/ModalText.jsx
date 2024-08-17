@@ -38,16 +38,16 @@ export default function ModalText({firstClick, isShowSecond, setIsShowSecond, ar
 }
 
 ModalText.propTypes = {
-    isShowSecond: PropTypes.bool.isRequired,
-    setIsShowSecond: PropTypes.func.isRequired,
+    isShowSecond: PropTypes.bool,
+    setIsShowSecond: PropTypes.func,
     array: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number,
-        name: PropTypes.string.isRequired,
+        name: PropTypes.string,
         description: PropTypes.string
       })
     ).isRequired,
     selectedProductId: PropTypes.string,
-    addToCart: PropTypes.func.isRequired,
+    addToCart: PropTypes.func,
     id: PropTypes.string
   };

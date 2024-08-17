@@ -29,17 +29,17 @@ export default function index({children, img,name, price, setIsShowSecond, setSe
 }
 
 index.propTypes = {
-  img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  setIsShowSecond: PropTypes.func.isRequired,
-  setSelectedProduct: PropTypes.func.isRequired,
+  img: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  setIsShowSecond: PropTypes.func,
+  setSelectedProduct: PropTypes.func,
   id: PropTypes.number,
   toogleIsFavorite: PropTypes.func,
   array: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
-      isFavorite: PropTypes.bool.isRequired
+      isFavorite: PropTypes.bool,
     })
   )
 };

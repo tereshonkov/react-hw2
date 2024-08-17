@@ -10,7 +10,7 @@ export default function Button({type, onClick, children}) {
 }
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  onClick: PropTypes.func,
+  children: PropTypes.node,
 };

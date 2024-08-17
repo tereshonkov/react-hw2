@@ -27,8 +27,8 @@ export default function index({array=[]}) {
 Headers.propTypes = {
   array: PropTypes.arrayOf(
     PropTypes.shape({
-      isFavorite: PropTypes.bool.isRequired,
-      quantity: PropTypes.number.isRequired
+      isFavorite: PropTypes.bool,
+      quantity: PropTypes.number,
     })
   )
 };
