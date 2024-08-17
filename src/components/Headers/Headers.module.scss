@@ -5,7 +5,9 @@
     align-items: center;
 }
 .favor {
-    display: block;
+    display: flex;
+    align-items: top;
+    justify-content: start;
     width: 44px;
     height: 44px;
     border-radius: 8px;
@@ -14,9 +16,16 @@
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: border-box;
+    text-decoration: none;
+    &.active {
+        align-items: center;
+        justify-content: center;
+        background: rgb(88, 75, 127);
+        cursor: default;
+    }
 }
 .cart {
-    display: block;
+    display: flex;
     width: 44px;
     height: 44px;
     border-radius: 8px;
@@ -26,10 +35,25 @@
     background-position: center;
     box-sizing: border-box;
     cursor: pointer;
+    &.active {
+        align-items: center;
+        justify-content: center;
+        background: rgb(88, 75, 127);
+        cursor: default;
+    }
 }
 .right {
     display: flex;
     flex-direction: row;
     gap: 12px;
     cursor: pointer;
+}
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    &.active {
+        cursor: default;
+    }
 }

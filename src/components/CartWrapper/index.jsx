@@ -4,7 +4,7 @@ import Card from '../Card'
 import ModalText from '../../components/ModalText/ModalText';
 import PropTypes from 'prop-types';
 
-export default function index({setIsShowSecond, array, setSelectedProductId, selectedProductId, isShowSecond, toogleIsFavorite, addToCart}) {
+export default function index({setIsShowSecond, array, setSelectedProductId, selectedProductId, isShowSecond, toogleIsFavorite, addToCart, renderMale, renderFemale}) {
   return (
     <div className={styles.wrapper}>
     <div>
@@ -13,7 +13,7 @@ export default function index({setIsShowSecond, array, setSelectedProductId, sel
         <h2>Categories For Men</h2>
       </div>
       <div className={styles.male}>
-      {array.filter(el => el.sex === "male").map(el => <Card array={array} toogleIsFavorite={toogleIsFavorite} id={el.id} setSelectedProduct={setSelectedProductId} setIsShowSecond={setIsShowSecond} key={el.sku} img={el.img} name={el.name} price={el.price}/>)}
+            {renderMale}
       </div>
     </div>
     <div>
@@ -22,7 +22,7 @@ export default function index({setIsShowSecond, array, setSelectedProductId, sel
     <h2>Categories For Women</h2>
     </div>
     <div className={styles.female}>
-    {array.filter(el => el.sex === "female").map(el => <Card array={array} toogleIsFavorite={toogleIsFavorite} id={el.id} setSelectedProduct={setSelectedProductId} setIsShowSecond={setIsShowSecond} key={el.sku} img={el.img} name={el.name} price={el.price}/>)}
+            {renderFemale}
     </div>
     </div>
     <ModalText addToCart={addToCart} array={array} isShowSecond={isShowSecond} setIsShowSecond={setIsShowSecond} selectedProductId={selectedProductId}></ModalText>
