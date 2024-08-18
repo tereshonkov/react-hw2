@@ -43,7 +43,7 @@ index.propTypes = {
     })
   ),
   setSelectedProductId: PropTypes.func,
-  selectedProductId: PropTypes.string,
+  selectedProductId: PropTypes.number,
   isShowSecond: PropTypes.bool,
   toogleIsFavorite: PropTypes.func,
   addToCart: PropTypes.func,

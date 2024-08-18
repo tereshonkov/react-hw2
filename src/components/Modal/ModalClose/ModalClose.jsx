@@ -16,7 +16,7 @@ export default function ModalClose({setIsShow, setIsShowSecond ,componentName}) 
 }
 
 ModalClose.propTypes = {
-  setIsShow: PropTypes.func.isRequired,
-  setIsShowSecond: PropTypes.func.isRequired,
-  componentName: PropTypes.oneOf(['ModalText', 'ModalImage']).isRequired
+  setIsShow: PropTypes.func,
+  setIsShowSecond: PropTypes.func,
+  componentName: PropTypes.oneOf(['ModalText', 'ModalImage']),
 };

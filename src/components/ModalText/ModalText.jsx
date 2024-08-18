@@ -47,7 +47,7 @@ ModalText.propTypes = {
         description: PropTypes.string
       })
     ).isRequired,
-    selectedProductId: PropTypes.string,
+    selectedProductId: PropTypes.number,
     addToCart: PropTypes.func,
     id: PropTypes.string
   };
