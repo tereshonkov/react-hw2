@@ -1,8 +1,10 @@
-import React from 'react'
 import CartWrapper from '../../components/CartWrapper'
+import { deleteCart } from '../../redux/slices/productSlice';
+import { useDispatch } from 'react-redux';
 
-export default function index({deleteCart, addToCart, toogleIsFavorite, array, isShowSecond, selectedProductId, setIsShowSecond, setSelectedProductId, renderCards,}) {
+export default function index({selectedProductId,  setSelectedProductId, renderCards}) {
+  const dispatch = useDispatch();
   return (
-    <CartWrapper firstClick={() => (deleteCart(selectedProductId))} firstText={"Delete"} renderFemale={renderCards(el => el.quantity > 0 && el.sex === "female", "Delete")} renderMale={renderCards(el => el.quantity > 0 && el.sex === "male", "Delete")} addToCart={addToCart} toogleIsFavorite={toogleIsFavorite} array={array} isShowSecond={isShowSecond} selectedProductId={selectedProductId} setIsShowSecond={setIsShowSecond} setSelectedProductId={setSelectedProductId}></CartWrapper>
+    <CartWrapper firstClick={() => (dispatch(deleteCart(selectedProductId)))} firstText={"Delete"} renderFemale={renderCards(el => el.quantity > 0 && el.sex === "female", "Delete")} renderMale={renderCards(el => el.quantity > 0 && el.sex === "male", "Delete")}  selectedProductId={selectedProductId} setSelectedProductId={setSelectedProductId}></CartWrapper>
   )
 }

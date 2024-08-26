@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './Headers.module.scss';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-export default function index({array=[]}) {
-  const favorite = array.filter(el => el.isFavorite).length;
-  const quantity = array.filter(el => el.quantity > 0).length;
+export default function index() {
+  const favorite = useSelector(state => state.products.data.filter(product => product.isFavorite).length);
+  const quantity = useSelector(state => state.products.data.filter(product => product.quantity).length);
   return (
     <div className={styles.wrapper}>
         <h2>Homework</h2>

@@ -5,49 +5,42 @@ import ModalBody from '../Modal/ModalBody/ModalBody';
 import styleBody from '../Modal/ModalBody/ModalBody.module.scss';
 import ModalFooter from '../Modal/ModalFooter/ModalFooter';
 import ModalClose from '../Modal/ModalClose/ModalClose';
-import Button from '../Button/Button';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { setIsShow } from '../../redux/slices/modalSlices';
 
-export default function ModalText({firstClick, isShowSecond, setIsShowSecond, array = [], selectedProductId, addToCart, id, firstText}) {
-    if(!isShowSecond) {
+export default function ModalText({firstClick,selectedProductId, firstText}) {
+
+  const isModalShow = useSelector(state => state.showModal.isShow);
+  const array = useSelector(state => state.products.data);
+  const dispatch = useDispatch();
+
+    if(!isModalShow) {
         return null;
     }
-    const selectFirstClick = () => {
-        console.log(`This is select first click`);
-    }
+
   return (
-    <div className={styles.wrapper} isShowSecond={isShowSecond} onClick={() => {setIsShowSecond(false)}}>
-        <ModalWrapper setIsShowSecond={setIsShowSecond}>
+    <div className={styles.wrapper} onClick={() => {dispatch(setIsShow(false))}}>
+        <ModalWrapper >
         <ModalBody>
             <h3 className={styleBody.body__header}>
             Add Product {array.filter(el => el.id === selectedProductId).map(el => <p key={el.id}>{el.name}</p>)}
         </h3>
-        {/* <p className={styleBody.body__text}> */}
         {array.filter(el => el.id === selectedProductId).map(el => <p className={styleBody.body__text} key={el.id}>{el.description}</p>)}
-        {/* </p> */}
             </ModalBody>
             <ModalFooter
                                 firstText={firstText} 
                                 firstClick={firstClick}
                                 componentName="ModalText"
             ></ModalFooter>
-                <ModalClose setIsShowSecond={setIsShowSecond} componentName="ModalText"></ModalClose>
+                <ModalClose componentName="ModalText"></ModalClose>
         </ModalWrapper>
     </div>
   )
 }
 
 ModalText.propTypes = {
-    isShowSecond: PropTypes.bool,
-    setIsShowSecond: PropTypes.func,
-    array: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number,
-        name: PropTypes.string,
-        description: PropTypes.string
-      })
-    ).isRequired,
-    selectedProductId: PropTypes.number,
-    addToCart: PropTypes.func,
-    id: PropTypes.string
-  };
+  firstClick: PropTypes.func,
+  selectedProductId: PropTypes.number,
+  firstText: PropTypes.string,
+};

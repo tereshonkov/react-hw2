@@ -3,17 +3,24 @@ import styles from './Card.module.scss'
 import StarIcon from '../../svg/StarIcon'
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { toogleIsFavorite } from '../../redux/slices/productSlice';
+import { setIsShow } from '../../redux/slices/modalSlices';
 
-export default function index({children, img,name, price, setIsShowSecond, setSelectedProduct, id, toogleIsFavorite = () => {}, array = [],}) {
+export default function index({children, img, name, price, setSelectedProduct, id}) {
 
-  const clickFunc = () => {
-    setIsShowSecond(true);
+  const array = useSelector(state => state.products.data);
+  const dispatch = useDispatch();
+  // const id = array.find(el => el.img === img && el.name === name).id;
+
+  function clickFunc() {
+    dispatch(setIsShow(true));
     setSelectedProduct(id);
   }
 
   return (
     <div className={styles.wrapper}>
-        <div className={`${styles.star} ${array.filter(el => el.id === id).map(el => el.isFavorite ? styles.activ : "")}`} onClick={() => {toogleIsFavorite(id)}}>
+        <div className={`${styles.star} ${array.filter(el => el.id === id).map(el => el.isFavorite ? styles.activ : "")}`} onClick={() => {dispatch(toogleIsFavorite(id))}}>
           <StarIcon/>
         </div>
         <img className={styles.img} src={img} alt="oops" />
@@ -32,8 +39,6 @@ index.propTypes = {
   img: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  setIsShowSecond: PropTypes.func,
-  setSelectedProduct: PropTypes.func,
   id: PropTypes.number,
   toogleIsFavorite: PropTypes.func,
   array: PropTypes.arrayOf(
