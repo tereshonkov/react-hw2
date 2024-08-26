@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import './App.css';
 import Headers from './components/Headers';
 import HeadersLogo from './components/HeadersLogo';
@@ -14,15 +14,12 @@ function App() {
   useEffect(() => {
     dispatch(fetchProducts());
   },[])
-
-  // const [isShowSecond, setIsShowSecond] = useState(false);
-  const [selectedProductId, setSelectedProductId] = useState(null);
   
   return (
   <div className="container">
     <Headers></Headers>
     <HeadersLogo></HeadersLogo>
-    <AppRouttes selectedProductId={selectedProductId} setSelectedProductId={setSelectedProductId} />
+    <AppRouttes />
     <Footer></Footer>
   </div>
   )

@@ -19,6 +19,7 @@ export const fetchProducts = createAsyncThunk(
     name: 'products',
     initialState: {
         data: [],
+        selectedProductId: null,
     },
     reducers: {
         toogleIsFavorite: (state,action) => {
@@ -39,6 +40,9 @@ export const fetchProducts = createAsyncThunk(
             elemCart.quantity = 0;
             setProductsToLocalStorage(state.data);
         },
+        setSelectedProductId: (state, action) => {
+            state.selectedProductId = action.payload;
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchProducts.fulfilled, (state, actions) => {
@@ -48,5 +52,5 @@ export const fetchProducts = createAsyncThunk(
     }
 });
 
-export const { toogleIsFavorite, addToCart, deleteCart } = productsSlice.actions;
+export const { toogleIsFavorite, addToCart, deleteCart, setSelectedProductId } = productsSlice.actions;
 export default productsSlice.reducer;

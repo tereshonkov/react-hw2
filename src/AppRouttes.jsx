@@ -6,9 +6,10 @@ import Home from './pages/Home'
 import Card from './components/Card'
 import { useSelector } from 'react-redux'
 
-export default function AppRouttes({deleteCart, toogleIsFavorite, isShowSecond, selectedProductId, setIsShowSecond, setSelectedProductId}) {
+export default function AppRouttes() {
 
     const array = useSelector(state => state.products.data);
+    
 
     const renderCards = (filterCondition, nameBtn) => {
         return array
@@ -16,11 +17,7 @@ export default function AppRouttes({deleteCart, toogleIsFavorite, isShowSecond, 
           .map(el => (
             <Card
               key={el.sku}
-              array={array}
-              toogleIsFavorite={toogleIsFavorite}
               id={el.id}
-              setSelectedProduct={setSelectedProductId}
-              setIsShowSecond={setIsShowSecond}
               img={el.img}
               name={el.name}
               price={el.price}
@@ -31,9 +28,9 @@ export default function AppRouttes({deleteCart, toogleIsFavorite, isShowSecond, 
 
   return (
     <Routes>
-        <Route path='/' element={<Home renderCards={renderCards}   selectedProductId={selectedProductId} setSelectedProductId={setSelectedProductId}/>} />
-        <Route path='/cart' element={<CartPages deleteCart={deleteCart} renderCards={renderCards}   selectedProductId={selectedProductId} setSelectedProductId={setSelectedProductId}/>} />
-        <Route path='/favorite' element={<Favorite renderCards={renderCards}    selectedProductId={selectedProductId} setSelectedProductId={setSelectedProductId}/>} />
+        <Route path='/' element={<Home renderCards={renderCards} />} />
+        <Route path='/cart' element={<CartPages renderCards={renderCards} />} />
+        <Route path='/favorite' element={<Favorite renderCards={renderCards} />} />
     </Routes>
   )
 }

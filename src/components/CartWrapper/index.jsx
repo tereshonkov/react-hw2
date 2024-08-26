@@ -5,7 +5,7 @@ import ModalText from '../../components/ModalText/ModalText';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-export default function index({firstClick, firstText, selectedProductId, renderMale, renderFemale}) {
+export default function index({firstClick, firstText, renderMale, renderFemale}) {
   const array = useSelector(state => state.products.data);
   return (
     <div className={styles.wrapper}>
@@ -27,7 +27,7 @@ export default function index({firstClick, firstText, selectedProductId, renderM
             {renderFemale}
     </div>
     </div>
-    <ModalText firstClick={firstClick} firstText={firstText} selectedProductId={selectedProductId}></ModalText>
+    <ModalText firstClick={firstClick} firstText={firstText}></ModalText>
     </div>
   )
 }

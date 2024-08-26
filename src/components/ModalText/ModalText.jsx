@@ -9,11 +9,12 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsShow } from '../../redux/slices/modalSlices';
 
-export default function ModalText({firstClick,selectedProductId, firstText}) {
+export default function ModalText({firstClick, firstText}) {
 
   const isModalShow = useSelector(state => state.showModal.isShow);
   const array = useSelector(state => state.products.data);
   const dispatch = useDispatch();
+  const idProduct = useSelector(state => state.products.selectedProductId);
 
     if(!isModalShow) {
         return null;
@@ -24,9 +25,9 @@ export default function ModalText({firstClick,selectedProductId, firstText}) {
         <ModalWrapper >
         <ModalBody>
             <h3 className={styleBody.body__header}>
-            Add Product {array.filter(el => el.id === selectedProductId).map(el => <p key={el.id}>{el.name}</p>)}
+            Add Product {array.filter(el => el.id === idProduct).map(el => <p key={el.id}>{el.name}</p>)}
         </h3>
-        {array.filter(el => el.id === selectedProductId).map(el => <p className={styleBody.body__text} key={el.id}>{el.description}</p>)}
+        {array.filter(el => el.id === idProduct).map(el => <p className={styleBody.body__text} key={el.id}>{el.description}</p>)}
             </ModalBody>
             <ModalFooter
                                 firstText={firstText} 

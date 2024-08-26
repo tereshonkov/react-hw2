@@ -6,16 +6,17 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { toogleIsFavorite } from '../../redux/slices/productSlice';
 import { setIsShow } from '../../redux/slices/modalSlices';
+import { setSelectedProductId } from '../../redux/slices/productSlice';
 
-export default function index({children, img, name, price, setSelectedProduct, id}) {
+export default function index({children, img, name, price, id}) {
 
   const array = useSelector(state => state.products.data);
+  
   const dispatch = useDispatch();
-  // const id = array.find(el => el.img === img && el.name === name).id;
 
   function clickFunc() {
     dispatch(setIsShow(true));
-    setSelectedProduct(id);
+    dispatch(setSelectedProductId(id));
   }
 
   return (
