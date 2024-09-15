@@ -15,10 +15,10 @@ export default function index() {
               <span>Home</span>
             </NavLink>
             <NavLink className={({isActive}) => isActive ? `${styles.favor} ${styles.active}` : styles.favor} to={"/favorite"}>
-              <span>{favorite}</span>
+              <span className={styles.fav}>{favorite}</span>
             </NavLink>
             <NavLink className={({isActive}) => isActive ? `${styles.cart} ${styles.active}` : styles.cart} to={"/cart"}>
-              {quantity}
+              <span className={styles.fav}>{quantity}</span>
             </NavLink>
         </div>
     </div>

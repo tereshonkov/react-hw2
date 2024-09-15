@@ -1,0 +1,21 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+input {
+    width: 26vw;
+    height: 7vh;
+    padding: 5.2%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(224, 219, 219);
+    box-sizing: border-box;
+}
+.error {
+    border: 1px solid red;
+}
+.span {
+    color: red;
+    font-size: 18px;
+}

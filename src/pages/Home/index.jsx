@@ -1,5 +1,6 @@
 import React from 'react'
 import CartWrapper from '../../components/CartWrapper';
+import HeadersLogo from '../../components/HeadersLogo';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/slices/productSlice';
 import { setIsShow } from '../../redux/slices/modalSlices';
@@ -14,6 +15,9 @@ export default function Home({renderCards,}) {
     }
   
   return (
+    <>
+    <HeadersLogo></HeadersLogo>
     <CartWrapper firstClick={(handle)} firstText={"Add"} renderFemale={renderCards(el => el.sex === "female", "Add to Cart")} renderMale={renderCards(el => el.sex === "male", "Add to Cart")} ></CartWrapper>
+    </>
   )
 }
