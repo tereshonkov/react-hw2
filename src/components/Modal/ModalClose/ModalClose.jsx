@@ -4,16 +4,12 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsShow } from '../../../redux/slices/modalSlices';
 
-export default function ModalClose({componentName}) {
+export default function ModalClose() {
   const dispatch = useDispatch();
   const modal = useSelector(state => state.showModal.isShow);
   return (
-    <div className={styles.close} onClick={() => {
-      if (componentName === 'ModalText') {
+    <div data-testid='close' className={styles.close} onClick={() => {
         dispatch(setIsShow(false));
-      } else if(componentName === 'ModalImage') {
-        dispatch(setIsShow(fasle));
-      }
     }}>
     </div>
   )

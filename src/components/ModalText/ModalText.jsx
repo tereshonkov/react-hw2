@@ -21,7 +21,7 @@ export default function ModalText({firstClick, firstText}) {
     }
 
   return (
-    <div className={styles.wrapper} onClick={() => {dispatch(setIsShow(false))}}>
+    <div data-testid='wrapper' className={styles.wrapper} onClick={() => {dispatch(setIsShow(false))}}>
         <ModalWrapper >
         <ModalBody>
             <h3 className={styleBody.body__header}>

@@ -25,13 +25,14 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 19.58vw;
+    // width: 19.58vw;
     max-height: 65.91vh;
     border: 1px solid black;
     border-radius: 15px;
     position: relative;
     box-sizing: border-box;
     padding: 10px 15px;
+    flex: 1 1 calc(25% - 12px);
 }
 .star {
     width: 20px;
@@ -48,4 +49,18 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+.list {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    & button {
+        border: none;
+    }
 }

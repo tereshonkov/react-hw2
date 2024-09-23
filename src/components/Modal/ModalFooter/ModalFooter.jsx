@@ -9,17 +9,14 @@ export default function ModalFooter({firstText, secondaryText, firstClick, secon
   return (
     <div className={styles.footer__btn}>
         <Button onClick={firstClick}>{firstText}</Button>
-        {componentName === 'ModalImage' ? (
-        <Button onClick={secondaryClick}>{secondaryText}</Button>
-      ) : null}
     </div>
   )
 }
 
 ModalFooter.propTypes = {
-  firstText: PropTypes.string.isRequired,
+  firstText: PropTypes.string,
   secondaryText: PropTypes.string,
-  firstClick: PropTypes.func.isRequired,
+  firstClick: PropTypes.func,
   secondaryClick: PropTypes.func,
-  componentName: PropTypes.oneOf(['ModalText', 'ModalImage']).isRequired
+  componentName: PropTypes.oneOf(['ModalText', 'ModalImage']),
 };

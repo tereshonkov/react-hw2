@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer text render should render the copyright text 1`] = `
+<DocumentFragment>
+   
+  <div
+    class="wrapper"
+  >
+    <div
+      class="headerGroup"
+    >
+      <div
+        class="header"
+      >
+        <div
+          class="rectangle"
+        />
+        <h2>
+          Check Out
+        </h2>
+      </div>
+      <div
+        class="headerSecond"
+      >
+        <h2>
+          Billing Details
+        </h2>
+      </div>
+    </div>
+    <div
+      class="wrapperForm"
+    >
+      <form
+        action=""
+        class="form"
+      >
+        <div
+          class="nameWrapper"
+        >
+          <div
+            class="inputWrapper"
+          >
+            <label
+              for="name"
+            >
+              Name
+            </label>
+            <input
+              class=""
+              name="name"
+              placeholder="Enter your name"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="inputWrapper"
+          >
+            <label
+              for="lastName"
+            >
+              Last Name
+            </label>
+            <input
+              class=""
+              name="lastName"
+              placeholder="Enter your last name"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="ageWrapper"
+        >
+          <div
+            class="inputWrapper"
+          >
+            <label
+              for="age"
+            >
+              Age
+            </label>
+            <input
+              class=""
+              name="age"
+              placeholder="Enter your Age"
+              type="number"
+              value=""
+            />
+          </div>
+          <div
+            class="inputWrapper"
+          >
+            <label
+              for="phone"
+            >
+              Phone Number
+            </label>
+            <input
+              class=""
+              name="phone"
+              placeholder="Enter your phone number"
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="adressWrapper"
+        >
+          <div
+            class="inputWrapper"
+          >
+            <label
+              for="city"
+            >
+              City
+            </label>
+            <input
+              class=""
+              name="city"
+              placeholder="Enter your city"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="inputWrapper"
+          >
+            <label
+              for="street"
+            >
+              Street
+            </label>
+            <input
+              class=""
+              name="street"
+              placeholder="Enter your street"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <button
+          class="btn"
+          type="submit"
+        >
+          Confirm order
+        </button>
+      </form>
+      <div
+        class="windowFav"
+      >
+        <h3>
+          Order Sumary
+        </h3>
+        <h3>
+          Total price: 0
+        </h3>
+      </div>
+    </div>
+  </div>
+   
+</DocumentFragment>
+`;

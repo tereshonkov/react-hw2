@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toogleIsFavorite } from '../../redux/slices/productSlice';
 import { setIsShow } from '../../redux/slices/modalSlices';
 import { setSelectedProductId } from '../../redux/slices/productSlice';
+import { useListContext } from '../../context/listContext';
 
 export default function index({children, img, name, price, id}) {
 
@@ -18,9 +19,10 @@ export default function index({children, img, name, price, id}) {
     dispatch(setIsShow(true));
     dispatch(setSelectedProductId(id));
   }
+  const {isGrid} = useListContext();
 
   return (
-    <div className={styles.wrapper}>
+    <div className={isGrid ? styles.wrapper : styles.list}>
         <div className={`${styles.star} ${array.filter(el => el.id === id).map(el => el.isFavorite ? styles.activ : "")}`} onClick={() => {dispatch(toogleIsFavorite(id))}}>
           <StarIcon/>
         </div>
